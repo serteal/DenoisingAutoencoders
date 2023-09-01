@@ -11,6 +11,10 @@ Through the denoising task, the model learns the input distribution and produces
     1. Freeze the encoder layers and use the latent representations to train supervised ML models, rendering DAE as a vehicle for automatic feature engineering.  
     2. Use the latent representations for unsupervised tasks like similarity query or clustering.  
 
+<p align="center">
+  <img src="static/dae_architecture.png">
+</p>
+
 ### Applying Denoise AutoEncoder to Tabular data  
 To train DAE on tabular data, the most important piece is the noise generator. What makes sense and most effective is [swap noise](https://www.kaggle.com/c/porto-seguro-safe-driver-prediction/discussion/44629), through which, each value in the training data maybe replaced by a random value from the same column.
 
