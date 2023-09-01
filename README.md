@@ -5,7 +5,7 @@
 ## Overview
 
 ### Denoising AutoEncoders (DAE)
-DAEs are [AutoEncoder](https://en.wikipedia.org/wiki/Autoencoder#:~:text=An%20autoencoder%20is%20a%20type,to%20ignore%20signal%20%E2%80%9Cnoise%E2%80%9D.) model trained to perform a denoising task. The model takes a partially corrupted input data and learns to clean and output the cleaned data.
+DAEs are [AutoEncoder](https://en.wikipedia.org/wiki/Autoencoder#:~:text=An%20autoencoder%20is%20a%20type,to%20ignore%20signal%20%E2%80%9Cnoise%E2%80%9D.) models trained to perform a denoising task. The model takes a partially corrupted input data and learns to clean and output the cleaned data.
 
 Through the denoising task, the model learns the input distribution and produces latent representations that are robust to corruptions. The latent representations extracted from the model can be useful for a variety of downstream tasks. One can:  
 
@@ -16,8 +16,8 @@ Through the denoising task, the model learns the input distribution and produces
   <img src="static/dae_architecture.png">
 </p>
 
-### Applying Denoise AutoEncoder to Tabular data  
-To train DAE on tabular data, the most important piece is the noise generator. What makes sense and most effective is [swap noise](https://www.kaggle.com/c/porto-seguro-safe-driver-prediction/discussion/44629), through which, each value in the training data maybe replaced by a random value from the same column.
+### Applying Denoising AutoEncoders to tabular data  
+To train DAEs on tabular data, the most important piece is the noise generator. What makes sense and most effective is [swap noise](https://www.kaggle.com/c/porto-seguro-safe-driver-prediction/discussion/44629), through which each value in the training data maybe replaced by a random value from the same column.
 
 ### What's included
 This package implements:  
@@ -31,7 +31,7 @@ This package implements:
 
 ## Installation
 
-tabdae is built with PyTorch. Make sure to install the dependencies listed in [requirements.txt](./requirements.txt). Then install the package using pip:
+`tabdae` is built with PyTorch. Make sure to install the dependencies listed in [requirements.txt](./requirements.txt). Then install the package using pip:
 ```bash
 pip install -r requirements.txt
 pip install git+https://github.com/alexstedev/DenoisingAutoencoders.git
