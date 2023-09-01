@@ -9,8 +9,8 @@ DAEs are [AutoEncoder](https://en.wikipedia.org/wiki/Autoencoder#:~:text=An%20au
 
 Through the denoising task, the model learns the input distribution and produces latent representations that are robust to corruptions. The latent representations extracted from the model can be useful for a variety of downstream tasks. One can:  
 
-    1. Freeze the encoder layers and use the latent representations to train supervised ML models, rendering DAE as a vehicle for automatic feature engineering.  
-    2. Use the latent representations for unsupervised tasks like similarity query or clustering.  
+1. Freeze the encoder layers and use the latent representations to train supervised ML models, rendering DAE as a vehicle for automatic feature engineering.  
+2. Use the latent representations for unsupervised tasks like similarity query or clustering.  
 
 <p align="center">
   <img src="static/dae_architecture.png">
@@ -22,12 +22,12 @@ To train DAE on tabular data, the most important piece is the noise generator. W
 ### What's included
 This package implements:  
 
-    1. Swap Noise generator.  
-    2. Dataframe parser which converts arbitrary pandas dataframe to numpy arrays.  
-    3. Network constructor with configurable body blocks.  
-    4. Training function.  
-    5. Sklearn style `.fit`, `.transform` API.  
-    6. Sklearn style model also supports `save` and `load`. 
+1. Swap Noise generator.  
+2. Dataframe parser which converts arbitrary pandas dataframe to numpy arrays.  
+3. Network constructor with configurable body blocks.  
+4. Training function.  
+5. Sklearn style `.fit`, `.transform` API.  
+6. Sklearn style model also supports `save` and `load`. 
 
 ## Installation
 
